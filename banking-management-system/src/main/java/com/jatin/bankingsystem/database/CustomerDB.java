@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.jatin.bankingsystem.models.Customer;
 
-public interface CustomerInterface extends JpaRepository<Customer, String>{
-    Customer findbyEmail(String email);
+public interface CustomerDB extends JpaRepository<Customer, Integer>{
+    Customer findByEmail(String email);
 
     void saveAll(List<Customer> customers);
 }
