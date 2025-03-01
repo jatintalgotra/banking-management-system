@@ -17,16 +17,8 @@ public class Account {
     @Id
     private String accountNumber = UUID.randomUUID().toString();
     private double balance;
-    // private long CustomerId;
-    // private long Account
-    // private String accountType;
-    
-    // private List<Transaction> transactionHistory = new ArrayList<>();
 
     public Account() {
-        // this.CustomerId = CustomerId;
-        // this.balance = balance;
-        // this.accountType = type;
     }
 
     public void display() {

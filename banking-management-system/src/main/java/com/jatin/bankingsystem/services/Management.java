@@ -2,6 +2,9 @@ package com.jatin.bankingsystem.services;
 
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.jatin.bankingsystem.database.AccountDB;
 import com.jatin.bankingsystem.database.CustomerDB;
 import com.jatin.bankingsystem.database.EmployeeDB;
@@ -15,18 +18,27 @@ import com.jatin.bankingsystem.models.Employee;
 import com.jatin.bankingsystem.models.Transaction;
 
 
-
+@Service
 public class Management {
+    @Autowired
     private AccountDB accountDb;
+    @Autowired
     private CustomerDB customerDb;
+    @Autowired
     private EmployeeDB employeeDb;
+    @Autowired
     private TransactionDB transactionDb;
+
     private Scanner sc;
 
     private Employee employee;
     private Customer customer;
     private Account account;
 
+    public Management(){
+        this.sc = new Scanner(System.in);
+    }
+    
     public void addCustomer() {
         System.out.println("Enter customer name: ");
         String name = sc.nextLine();
