@@ -9,5 +9,5 @@ import com.jatin.bankingsystem.models.Customer;
 public interface CustomerDB extends JpaRepository<Customer, Integer>{
     Customer findByEmail(String email);
 
-    void saveAll(List<Customer> customers);
+    // void saveAll(List<Customer> customers);
 }

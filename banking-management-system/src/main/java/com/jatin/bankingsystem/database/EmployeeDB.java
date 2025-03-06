@@ -9,5 +9,5 @@ import com.jatin.bankingsystem.models.Employee;
 public interface EmployeeDB extends JpaRepository<Employee, Integer>{
     Employee findByEmail(String email);
 
-    void saveAll(List<Employee> employees);
+    // void saveAll(List<Employee> employees);
 }
